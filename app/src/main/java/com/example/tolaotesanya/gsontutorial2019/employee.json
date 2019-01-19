@@ -1,5 +1,9 @@
 {
   "age": 31,
   "firstname": "Sarah",
+  "address": {
+    "city": "Dublin",
+    "country": "Ireland"
+  },
   "mail": "sarah@mail.com"
 }

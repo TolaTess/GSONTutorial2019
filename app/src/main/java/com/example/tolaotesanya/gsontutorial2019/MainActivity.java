@@ -14,15 +14,18 @@ public class MainActivity extends AppCompatActivity {
 
         Gson gson = new Gson();
 
-        /*Serialization
+        Address address = new Address("Ireland", "Dublin");
+
+        //Serialization
 
         //using the constructor, send in the value for the employee object
-        Employee employee = new Employee("Sarah", 31, "sarah@mail.com");
+        Employee employee = new Employee("Sarah", 31, "sarah@mail.com", address);
         //serialize the employee details using gson.
         String json = gson.toJson(employee);
-        */
 
+        /*
         //Deserialization
+
         String json = "{\n" +
                 "  \"age\": 31,\n" +
                 "  \"firstname\": \"John\",\n" +
@@ -30,6 +33,6 @@ public class MainActivity extends AppCompatActivity {
                 "}";
 
         Employee employee = gson.fromJson(json, Employee.class);
-
+        */
     }
 }
