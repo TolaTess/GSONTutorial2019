@@ -5,6 +5,9 @@ import android.os.Bundle;
 
 import com.google.gson.Gson;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -15,16 +18,19 @@ public class MainActivity extends AppCompatActivity {
         Gson gson = new Gson();
 
         Address address = new Address("Ireland", "Dublin");
+        List<FamilyMember> family = new ArrayList<>();
+        family.add(new FamilyMember("Wife", 30));
+        family.add(new FamilyMember("Son", 10));
 
-        /*Serialization
+        //Serialization
 
         //using the constructor, send in the value for the employee object
-        Employee employee = new Employee("Sarah", 31, "sarah@mail.com", address);
+        Employee employee = new Employee("Sarah", 31, "sarah@mail.com", address, family);
         //serialize the employee details using gson.
         String json = gson.toJson(employee);
-        */
 
-        //Deserialization
+
+        /*Deserialization
 
         String json = "{\n" +
                 "  \"age\": 31,\n" +
@@ -37,6 +43,6 @@ public class MainActivity extends AppCompatActivity {
                 "}";
 
         Employee employee = gson.fromJson(json, Employee.class);
-
+        */
     }
 }

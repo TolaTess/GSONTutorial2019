@@ -5,5 +5,15 @@
     "city": "Dublin",
     "country": "Ireland"
   },
+  "family": [
+    {
+      "age": 30,
+      "role": "Wife"
+    },
+    {
+      "age": 10,
+      "role": "Son"
+    }
+  ],
   "mail": "sarah@mail.com"
 }
