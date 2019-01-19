@@ -16,23 +16,27 @@ public class MainActivity extends AppCompatActivity {
 
         Address address = new Address("Ireland", "Dublin");
 
-        //Serialization
+        /*Serialization
 
         //using the constructor, send in the value for the employee object
         Employee employee = new Employee("Sarah", 31, "sarah@mail.com", address);
         //serialize the employee details using gson.
         String json = gson.toJson(employee);
+        */
 
-        /*
         //Deserialization
 
         String json = "{\n" +
                 "  \"age\": 31,\n" +
-                "  \"firstname\": \"John\",\n" +
+                "  \"firstname\": \"Sarah\",\n" +
+                "  \"address\": {\n" +
+                "    \"city\": \"Dublin\",\n" +
+                "    \"country\": \"Ireland\"\n" +
+                "  },\n" +
                 "  \"mail\": \"sarah@mail.com\"\n" +
                 "}";
 
         Employee employee = gson.fromJson(json, Employee.class);
-        */
+
     }
 }
