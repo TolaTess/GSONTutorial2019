@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
@@ -17,7 +18,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Gson gson = new Gson();
+        //When using Expose, use GsonBuilder as Gson will ignore Expose notation.
+        //Gson gson = new Gson();
+
+        Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
 
         /*Serialization
         Address address = new Address("Ireland", "Dublin");
@@ -27,10 +31,11 @@ public class MainActivity extends AppCompatActivity {
 
 
         //using the constructor, send in the value for the employee object
-        Employee employee = new Employee("Sarah", 31, "sarah@mail.com", address, family);
+        Employee employee = new Employee("Sarah", 31, "sarah@mail.com", "dsgjdkb", address, family);
         //serialize the employee details using gson.
         String json = gson.toJson(employee);
         */
+
 
 
         //Deserialization
